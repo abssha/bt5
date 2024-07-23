@@ -34,11 +34,22 @@
             {
                 border: none;
             }
+            .dropdown-toggle::after
+            {
+                display: none;
+            }
+            .dp_c
+            {
+                background: #573a70;
+            }
+            .dp_i
+            {
+                color: #fff;
+            }
             .u_headernav>li>a
             {
                 padding: 60px 32px 21px 32px;
-            }
-            
+            }    
             .active
             {
                 background: #573a70; 
@@ -56,6 +67,10 @@
                 border-radius: 35px;
                 background: #744c97;
             }
+            header .navbar-nav 
+            {
+                padding-left: 39px !important;
+            }
             .u_headernav>li>a>span
             {
                 top: 55px;
@@ -63,7 +78,7 @@
             }
             .u_headernav>li>a>i
             {
-                top: 68px;
+                top: 67px;
                 right: 0px;
                 font-size: 12px;
             }
@@ -239,7 +254,7 @@
                       <div class="collapse navbar-collapse justify-content-end row m-0 p-0" id="navbarNav">
                         <ul class="navbar-nav u_headernav float-end col-12 col-sm-12 col-md-10 col-lg-12 col-xl-12 col-xxl-8">
                           <li class="nav-item">
-                            <a class="nav-link active rounded-bottom text-white dummy" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active active1 rounded-bottom text-white dummy" aria-current="page" href="#">Home</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link rounded-bottom text-white active1 dummy" href="#">Services</a>
@@ -250,9 +265,15 @@
                           <li class="nav-item">
                             <a class="nav-link rounded-bottom text-white active1 dummy" href="#">Tools &amp; Resources</a>
                           </li>
-                          <li class="nav-item">
-                            <a class="nav-link rounded-bottom position-relative" href="#" style="color: #bf9fca; padding-left: 50px; padding-right: 20px;"><span class="d-inline-block position-absolute u_user"></span>Abrar Shaikh<i class="fa-solid fa-chevron-down position position-absolute"></i></a>
-                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false style=" style="color: #bf9fca; padding-left: 50px; padding-right: 20px;">
+                                <span class="d-inline-block position-absolute u_user"></span>Abrar Shaikh<i class="fa-solid fa-chevron-down position position-absolute"></i>
+                            </a>
+                            <ul class="dropdown-menu dp_c">
+                              <li><a class="dropdown-item dp_i" href="#">Action</a></li>
+                              <li><a class="dropdown-item dp_i" href="#">Another action</a></li>
+                              <li><a class="dropdown-item dp_i" href="#">Something else here</a></li>
+                            </ul>
                         </ul>
                       </div>
                     </div>
@@ -357,7 +378,18 @@
             </footer>
         </div>
         
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+        <script>
+            (function($){
+                $('.active1').click(function(){
+                    $('.active').removeClass('active');
+                    $(this).addClass('active');
+                });
+            })(jQuery);
+        </script>
+    
     </body>
     
 </html>
