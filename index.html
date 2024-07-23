@@ -19,7 +19,20 @@
             }
             header
             {
-                height: 140px;
+                min-height: 140px;
+            }
+            .fa-bars
+            {
+                color: #fff;
+                height: 40px;
+                width: 40px;
+                padding: 10px;
+                background-color: #ffbf00;
+                border: 1px solid #fff;
+            }
+            .navbar-toggler
+            {
+                border: none;
             }
             .u_headernav>li>a
             {
@@ -38,20 +51,20 @@
             }
             .u_user
             {
-                height: 37px;
-                width: 37px;
-                border-radius: 37px;
+                height: 35px;
+                width: 35px;
+                border-radius: 35px;
                 background: #744c97;
             }
             .u_headernav>li>a>span
             {
                 top: 55px;
-                left: 30px;
+                left: 7px;
             }
             .u_headernav>li>a>i
             {
                 top: 68px;
-                right: 33px;
+                right: 0px;
                 font-size: 12px;
             }
             .u_main
@@ -81,7 +94,7 @@
             }
             .u_panel
             {
-                height: 224px;
+                min-height: 224px;
                 background: #424d83;
                 transition: all 0.2s linear;
             }
@@ -165,11 +178,15 @@
             }
             .u_panel2:hover .up2
             {
-                margin-top: 30px !important;
+                margin-top: 40px !important;
+            }
+            .up3
+            {
+                margin-top: 29px !important;
             }
             .u_panel1:hover .up3
             {
-                margin-top: 15px !important;
+                margin-top: 10px !important;
             }
             .up4
             {
@@ -179,6 +196,31 @@
             {
                 margin-top: 13px !important;
             }
+            header .navbar-nav
+            {
+                padding-left: 22px;
+            }
+            .dummy
+            {
+                padding-left: 36px !important;
+                padding-right: 36px !important;
+            }
+            @media screen and (max-width: 992px)
+            {
+                .u_headernav
+                {
+                    background: #573a70 !important;
+                } 
+                .u_headernav a
+                {
+                    border-bottom: 1px solid #744c97;
+                    border-radius: 0px !important;
+                }   
+            }
+            .ft
+            {
+                margin-top: 200px !important;
+            }
         </style>
     
     </head>
@@ -186,74 +228,85 @@
     <body>
         <div class="container u_cont p-0">
             <header>
-                <a href="#"><img src="./IMG/logo2.png" alt="LOGO" height="35px" class="float-start mt-5"></a>
-                <ul class="nav float-end u_headernav">
-                    <li class="nav-item">
-                      <a class="nav-link active rounded-bottom text-white" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link rounded-bottom text-white active1" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link rounded-bottom text-white active1" href="#">Our Plans</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link rounded-bottom text-white active1" href="#">Tools &amp; Resources</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link rounded-bottom position-relative" href="#" style="color: #bf9fca; padding-left: 73px !important; padding-right: 50px;"><span class="d-inline-block position-absolute u_user"></span>Nidhi Bokadiya<i class="fa-solid fa-chevron-down position position-absolute"></i></a>
-                    </li>
-                  </ul>
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">
+                        <img src="./IMG/logo2.png" alt="LOGO" height="35px" class="float-start">
+                      </a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars"></i>
+                      </button>
+                      <div class="collapse navbar-collapse justify-content-end row m-0 p-0" id="navbarNav">
+                        <ul class="navbar-nav u_headernav float-end col-12 col-sm-12 col-md-10 col-lg-12 col-xl-12 col-xxl-8">
+                          <li class="nav-item">
+                            <a class="nav-link active rounded-bottom text-white dummy" aria-current="page" href="#">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link rounded-bottom text-white active1 dummy" href="#">Services</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link rounded-bottom text-white active1 dummy" href="#">Our Plans</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link rounded-bottom text-white active1 dummy" href="#">Tools &amp; Resources</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link rounded-bottom position-relative" href="#" style="color: #bf9fca; padding-left: 50px; padding-right: 20px;"><span class="d-inline-block position-absolute u_user"></span>Abrar Shaikh<i class="fa-solid fa-chevron-down position position-absolute"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
             </header>
             <div class="u_main text-white">
-                <h1>Welcome Nidhi Bokadiya!</h1>
+                <h1>Welcome Abrar Shaikh!</h1>
                 <h4 class="fw-normal h_4">How can we help you?</h4>
                 <p class="h_4 mt-5 fs-6">Get started with ideal to manage your projects, clients and stakeholders</p>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-12 col-md-6 col-xl-3 mb-3">
                         <div class="u_panel u_panel1 p-4 rounded-2">
                             <div class="launch rounded"></div>
                             <h5 class="pt-3">InnovEx Decision Hub</h5>
                             <div class="u_panel_c1 d-none mt-4">
-                                <img src="./IMG/e1.png" alt="e1" height="220px" width="250">
+                                <img class="img-fluid" src="./IMG/e1.png" alt="e1" height="220px" width="250">
                             </div>
                             <a href="#" class="text-white text-decoration-none float-end">Learn more<i class="fa-solid fa-chevron-right ms-2"></i></a>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-12 col-md-6 col-xl-3 mb-3">
                         <div class="u_panel u_panel2 p-4 rounded-2">
                             <div class="grp rounded"></div>
                             <h5 class="pt-3">MarketPlace Vistas &amp; Decision Hub (MVDH)</h5>
                             <div class="u_panel_c2 d-none mt-4">
-                                <img src="./IMG/e2.png" alt="e2" height="180px" width="265px">
+                                <img class="img-fluid" src="./IMG/e2.png" alt="e2" height="180px" width="265px">
                             </div>
                             <a href="#" class="text-white text-decoration-none float-end up2">Learn more<i class="fa-solid fa-chevron-right ms-2"></i></a>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-12 col-md-6 col-xl-3 mb-3">
                         <div class="u_panel u_panel1 p-4 rounded-2">
                             <div class="launch rounded"></div>
                             <h5 class="pt-3">SustainX Decision Hub</h5>
                             <div class="u_panel_c3 d-none mt-4">
-                                <img src="./IMG/e3.png" alt="e1" width="250px">
+                                <img class="img-fluid" src="./IMG/e3.png" alt="e1" width="250px">
                             </div>
                             <a href="#" class="text-white text-decoration-none float-end up3">Learn more<i class="fa-solid fa-chevron-right ms-2"></i></a>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-12 col-md-6 col-xl-3 mb-3">
                         <div class="u_panel u_panel2 p-4 rounded-2">
                             <div class="grp rounded"></div>
                             <h5 class="pt-3">Agile ResearchOps &amp; Knowledge Hub (ARKH)</h5>
                             <div class="u_panel_c2 d-none mt-4">
-                                <img src="./IMG/e4.png" alt="e4" width="263px">
+                                <img class="img-fluid" src="./IMG/e4.png" alt="e4" width="263px">
                             </div>
                             <a href="#" class="text-white text-decoration-none float-end up4">Learn more<i class="fa-solid fa-chevron-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <footer class="mycolor">
-                <div class="row m-0">
+            <footer class="mycolor ft">
+                <div class="row m-0 mt-5">
                     <div class="col-5 ps-0 mt-4">
                         <h5 class="fw-bolder">FEATURES</h5>
                         <ul class="nav">
